@@ -1,3 +1,10 @@
+:root{
+    --background-light: #F0F2FA;
+    --background-white: #F6F5FF;
+    --text-dark: #0A0040;
+    --primary-color: #6143FF;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -7,5 +14,148 @@
 body{
     width: 100vw;
     height: 100vh;
-    background-color: red;
+    background-color: aliceblue;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display:flex;
+}
+
+.sidebar {
+    width: 100px;
+    background-color: var(--primary-color);
+}
+
+img {
+    max-width: 100%;
+}
+
+nav{
+    height: 100px;
+    width: calc(100vw - 100px);
+    background-color: #C1BCEC;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+.btn{
+    padding: 20px 30px;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+}
+
+.btn-primary{
+    background-color: #6143FF;
+    color: var(--background-light);
+}
+
+main{
+    display: flex;
+    padding: 20px;
+}
+
+section.graph{
+    width: 33%;
+    height: 100%;
+}
+
+
+.graph-header h2{
+    display: inline-block;
+}
+
+hr.linha-header{
+    width: 50px;
+    display: inline-block;
+}
+
+.graph-header-tasks{
+    margin-top:10px;
+}
+
+.graph-area{
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.tasks-left{
+    margin-top: 10px;
+}
+
+.list{
+    padding: 5px 15px;
+    flex: 1;
+}
+
+.list-header{
+    display: flex;
+}
+
+.task-list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.task-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0px;
+    background-color:var(--background-light);
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--background-light);
+}
+
+.task-item:hover{
+    background-color: var(--primary-color);
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.sphere{
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.priority, .actions{
+    flex: 1;
+}
+
+.priority{
+    display: flex;
+}
+
+.actions{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.task-title{
+    padding-left: 10px;
+    font-weight: bold;
 }
